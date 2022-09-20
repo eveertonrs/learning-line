@@ -1,47 +1,30 @@
 package br.com.beginner;
 
-import java.util.Scanner;
-
 public class Main {
 
-	private static Scanner input;
 
 	public static void main(String[] args) {
-		input = new Scanner(System.in);
 
-		for (int i = 0; i < 5; i++) {
-
-			System.out.println("Digite : ");
-			int numero;
-			numero = input.nextInt();
-
-			if (numero % 2 == 0) {
-				System.out.println("Seu numero é Par");
-			} 
-			else {
-				System.out.println("Seu numero é Impar");
-			}
+		Hulk hulk = new Hulk();
 		
-			switch (numero) {
-			case 1:
-				System.out.println("Amarelo");
-				break;
-			case 2:
-				System.out.println("Vermelho");
-				break;
-			case 3:
-				System.out.println("Azul");
-				break;
-			case 4:
-				System.out.println("Verde");
-				break;
-			case 5:
-				System.out.println("Laranja");
-				break;
-			default:
-				System.out.println("Preto");
-			}
-		}
+		hulk.setName("Bruce Banner");
+		hulk.setForce(1.5);
+		hulk.training();
+		hulk.setSuperForce(false);
+		hulk.transform();
 
+		IronMan ironMan = new IronMan();
+		
+		ironMan.setName("Tony Stark");
+		ironMan.setForce(1.0);
+		ironMan.training();
+		ironMan.setHasArmorActivated(false);
+		ironMan.wearArmor();
+		
+		
+		System.out.println("this name hero is " + ironMan.getName());
+		System.out.println("this power hero is " + ironMan.getForce());
+		
+		
 	}
 }
